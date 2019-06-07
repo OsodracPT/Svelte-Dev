@@ -1,6 +1,7 @@
 <script>
   import Navbar from "./Navbar.svelte";
   import Player from "./Player.svelte";
+  import AddPlayer from "./AddPlayer.svelte";
 
   let players = [
     {
@@ -16,10 +17,12 @@
       points: 34
     }
   ];
+  console.table(players);
 </script>
 
 <Navbar />
 <div class="container">
+  <AddPlayer />
   {#if players.length === 0}
     <p>No Players</p>
   {:else}
